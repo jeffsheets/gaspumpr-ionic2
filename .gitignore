@@ -28,3 +28,5 @@ UserInterfaceState.xcuserstate
 #I added .io-config.json to ignore because it holds an api-key
 #not sure if this is ionic2 best practice or not
 .io-config.json
+
+/apks/

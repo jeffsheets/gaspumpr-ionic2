@@ -1,8 +1,11 @@
-<ion-navbar *navbar>
-  <ion-title>Tab 1</ion-title>
+
+<ion-navbar *navbar primary>
+  <ion-title>
+    Calculator
+  </ion-title>
 </ion-navbar>
 
-<ion-content padding class="page1">
+<ion-content class="page1">
   <div id="container">
     <div class="inner">
 
@@ -13,31 +16,30 @@
 
       <section id="downloads" class="clearfix">
         <h4 class="instr">Enter price of non-ethanol gas</h4>
-        <span class="price">$<input id="price" type="text" placeholder="0.000" value="" autofocus="autofocus" onblur="priceOnBlur(this)" onkeypress="priceKeypress(this, event)"/></span>
-        <a href="javascript:calculate()" class="button" id="price-btn"><span style="font-size:1em">Compare Price</span></a>
-        <div id="results" class="results">
-          <span class="result">Buy E85 <span class="result-price">$<span id="e85"></span></span> or less</span>
-          <span class="result">Buy E15 <span class="result-price">$<span id="e15"></span></span> or less</span>
-          <span class="result">Buy E10 <span class="result-price">$<span id="e10"></span></span> or less</span>
+        <span class="price">$<input id="price" type="tel" placeholder="0.000" [(ngModel)]="price" (change)="calculate()"/></span>
+        <button (click)="calculate()" id="price-btn">
+          Compare Price
+        </button>
+        <div id="results" class="results" *ngIf="e85">
+          <span class="result">Buy E85 <span class="result-price">$<span id="e85">{{e85}}</span></span> or less</span>
+          <span class="result">Buy E15 <span class="result-price">$<span id="e15">{{e15}}</span></span> or less</span>
+          <span class="result">Buy E10 <span class="result-price">$<span id="e10">{{e10}}</span></span> or less</span>
         </div>
 
       </section>
 
-      <hr>
-
       <section>
-        <h3>Higher Octane will NOT improve MPG</h3>
+        <h3>Ethanol vs Gasoline</h3>
         <p>
-          Buy the lowest Octane that your vehicle recommends. 'Premium' does not increase your miles per gallon. <a href="about.html">More Details</a>
+          Ethanol reduces your miles per gallon (MPG) of purchased gasoline.
+          This calculator compares the miles per dollar value based on the price of gas.
         </p>
-        <h3>Not all cars take E85 FlexFuel</h3>
-        <p>E85 Flex Fuel is 85% ethanol and CANNOT be used in every engine.
-          Make sure you have a FlexFuel car before purchasing E85.
-          Many manufacturers use yellow gas caps to signify that E85 is permitted.
+        <h3>Octane does not affect MPG</h3>
+        <p>
+          Buy the lowest Octane that your vehicle recommends. 'Premium' does not increase your miles per gallon.
         </p>
-
-        <p style="text-align:center">
-          <a href="about.html" class="button"><span style="padding-left:20px">How Does It Work?</span></a>
+        <p class="bottom-button">
+          <button small (click)="selectAboutTab()">How Does It Work?</button>
         </p>
       </section>
     </div>

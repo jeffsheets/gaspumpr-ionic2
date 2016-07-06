@@ -2,7 +2,7 @@
 
 Source for the GasPumpr iOS and Android app
 
-Also see the http://gaspumpr.com source at: https://github.com/jeffsheets/GasPumpr.com
+Nconfi source at: https://github.com/jeffsheets/GasPumpr.com
 
 Answering the questions: Is ethanol worth it? Is E85 worth it?
 
