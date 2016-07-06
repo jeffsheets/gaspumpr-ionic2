@@ -1,0 +1,45 @@
+<ion-navbar *navbar>
+  <ion-title>Tab 1</ion-title>
+</ion-navbar>
+
+<ion-content padding class="page1">
+  <div id="container">
+    <div class="inner">
+
+      <header>
+        <h1>{GasPump<span class="logo-r">r</span>}</h1>
+        <h2>Is ethanol worth it or not?</h2>
+      </header>
+
+      <section id="downloads" class="clearfix">
+        <h4 class="instr">Enter price of non-ethanol gas</h4>
+        <span class="price">$<input id="price" type="text" placeholder="0.000" value="" autofocus="autofocus" onblur="priceOnBlur(this)" onkeypress="priceKeypress(this, event)"/></span>
+        <a href="javascript:calculate()" class="button" id="price-btn"><span style="font-size:1em">Compare Price</span></a>
+        <div id="results" class="results">
+          <span class="result">Buy E85 <span class="result-price">$<span id="e85"></span></span> or less</span>
+          <span class="result">Buy E15 <span class="result-price">$<span id="e15"></span></span> or less</span>
+          <span class="result">Buy E10 <span class="result-price">$<span id="e10"></span></span> or less</span>
+        </div>
+
+      </section>
+
+      <hr>
+
+      <section>
+        <h3>Higher Octane will NOT improve MPG</h3>
+        <p>
+          Buy the lowest Octane that your vehicle recommends. 'Premium' does not increase your miles per gallon. <a href="about.html">More Details</a>
+        </p>
+        <h3>Not all cars take E85 FlexFuel</h3>
+        <p>E85 Flex Fuel is 85% ethanol and CANNOT be used in every engine.
+          Make sure you have a FlexFuel car before purchasing E85.
+          Many manufacturers use yellow gas caps to signify that E85 is permitted.
+        </p>
+
+        <p style="text-align:center">
+          <a href="about.html" class="button"><span style="padding-left:20px">How Does It Work?</span></a>
+        </p>
+      </section>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,59 @@
+
+.page1 {
+
+  #downloads {
+    margin: 10px auto;
+    display:block;
+    text-align:center;
+  }
+
+  #price-btn span {
+    background-color: transparent;
+    background-image: url(../../img/gas-icon.png);
+    background-position: 15px 50%;
+    background-size: 23px;
+    background-repeat: no-repeat;
+    padding-left:42px;
+  }
+  #price-btn {
+    margin-right: 0;
+    margin-bottom:10px;
+    padding-left:.1em;
+  }
+
+  .instr {
+    font-size:1.2em;
+    padding-bottom:5px;
+  }
+  .result-price {
+    font-size:1.3em;
+    color: #008822;
+  }
+
+  .price {
+    font-size:3em;
+    display:block;
+  }
+  .price input {
+    font-size:1em;
+    width: 3.6em;
+    margin-left:5px;
+    padding: 8px 18px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border-top: solid 1px #cbcbcb;
+    border-left: solid 1px #b7b7b7;
+    border-right: solid 1px #b7b7b7;
+    border-bottom: solid 1px #b3b3b3;
+    margin-bottom:10px;
+  }
+  .results {
+    margin:0px auto 10px;
+  }
+  .result {
+    display:block;
+    font-size:1.4em;
+  }
+
+}
